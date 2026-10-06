@@ -14,6 +14,8 @@ npm run dev   # http://localhost:3000
 - `app/i18n/` — 한국어·베트남어·영어 사전. `ko.ts`가 기준 타입, 언어는 `lang` 쿠키에 저장
 - `app/data.ts` — 샘플 데이터(다국어). API 연결 시 교체
 
+디자인 기준(색 토큰·타이포·컴포넌트 규칙)은 [DESIGN.md](DESIGN.md).
+
 ## 배포
 
 공유 썸네일 절대경로용으로 `NEXT_PUBLIC_SITE_URL`에 배포 도메인을 설정하세요.

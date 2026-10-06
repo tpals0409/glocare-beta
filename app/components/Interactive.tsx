@@ -52,7 +52,7 @@ export function WeeklyGoals() {
       <h2 id="goal-h" className="h3">{t.home.goals}</h2>
       <div className="row-between">
         <strong>{t.home.goalRate}</strong>
-        <Ring pct={pct} size={76} stroke={7} track="#EAF4F2" fontSize={17} />
+        <Ring pct={pct} size={76} stroke={7} track="var(--data-teal-track)" fontSize={17} />
       </div>
       <ul>
         {t.home.goalItems.map((label, i) => (

@@ -13,10 +13,10 @@ export default async function Stats() {
     <main className="main">
       <PageHeader title={p.title} desc={p.desc} backLabel={t.common.back} />
       <div className="stats">
-        <StatTile icon="target" color="#D64535" label={s.days} value={s.daysV} />
-        <StatTile icon="check" color="#1F8F6A" label={s.solved} value={s.solvedV} />
-        <StatTile icon="bars" color="#4A6FD8" label={s.accuracy} value="76%" />
-        <StatTile icon="clock" color="#4A6FD8" label={s.time} value={s.timeV} />
+        <StatTile icon="target" color="var(--primary)" label={s.days} value={s.daysV} />
+        <StatTile icon="check" color="var(--positive)" label={s.solved} value={s.solvedV} />
+        <StatTile icon="bars" color="var(--data-blue)" label={s.accuracy} value="76%" />
+        <StatTile icon="clock" color="var(--data-blue)" label={s.time} value={s.timeV} />
       </div>
       <div className="split">
         <Card as="section" className="chart-card">

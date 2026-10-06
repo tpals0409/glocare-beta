@@ -12,7 +12,7 @@ export default async function Notifications() {
         <ul>
           {NOTIFICATIONS.map((n, i) => (
             <li key={i} className={n.unread ? "unread" : undefined}>
-              <Icon name="bell" size={20} color={n.unread ? "#D64535" : "#9A8F8D"} />
+              <Icon name="bell" size={20} color={n.unread ? "var(--primary)" : "var(--fg-faint)"} />
               <span>{n.title[lang]}</span>
               <small>{n.time[lang]}</small>
             </li>

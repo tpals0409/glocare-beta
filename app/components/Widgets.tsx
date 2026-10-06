@@ -91,7 +91,7 @@ export function FormDemo({ children, submit, success }: { children: ReactNode; s
   if (sent) {
     return (
       <div className="success" role="status">
-        <Icon name="check" size={40} color="#1F8F6A" width={2} />
+        <Icon name="check" size={40} color="var(--positive)" width={2} />
         <p>{success}</p>
         <button type="button" className="btn btn-white" onClick={() => setSent(false)}>{t.common.retryForm}</button>
       </div>

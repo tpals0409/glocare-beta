@@ -38,7 +38,7 @@ export default async function Course({ params, searchParams }: {
             {chapters.map((title, i) => (
               <li key={i}>
                 <Link href={`?ch=${i}`} aria-current={i === ch ? "step" : undefined}>
-                  <span className="ch-no">{i < ch ? <Icon name="check" size={18} color="#1F8F6A" width={2} /> : i + 1}</span>{title}
+                  <span className="ch-no">{i < ch ? <Icon name="check" size={18} color="var(--positive)" width={2} /> : i + 1}</span>{title}
                 </Link>
               </li>
             ))}

@@ -35,7 +35,7 @@ export default async function Jobs() {
         <h2 id="postings" className="h2">{j.postings}</h2>
         {POSTINGS.map((p, i) => (
           <Card key={i} hover className="posting">
-            <IconTile name="bag" color="#E0742E" />
+            <IconTile name="bag" color="var(--data-orange)" />
             <div><strong>{p.org[lang]}</strong><small>{p.place[lang]} · {p.type[lang]}</small></div>
             <span className="tag">{p.pay[lang]}</span>
           </Card>

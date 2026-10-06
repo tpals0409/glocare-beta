@@ -14,10 +14,10 @@ export default async function Page() {
   const s = t.stats;
   const course = COURSES[0];
   const stats: [IconName, string, string, string][] = [
-    ["target", "#D64535", s.days, s.daysV],
-    ["check", "#1F8F6A", s.solved, s.solvedV],
-    ["bars", "#4A6FD8", s.accuracy, "76%"],
-    ["clock", "#4A6FD8", s.time, s.timeV],
+    ["target", "var(--primary)", s.days, s.daysV],
+    ["check", "var(--positive)", s.solved, s.solvedV],
+    ["bars", "var(--data-blue)", s.accuracy, "76%"],
+    ["clock", "var(--data-blue)", s.time, s.timeV],
   ];
 
   return (
@@ -66,14 +66,14 @@ export default async function Page() {
             </Card>
             <Card as="article" tone="green" hover className="mini">
               <div className="mini-head">
-                <IconTile name="clipboard" color="#1C7A55" size={40} bg="#CDEBDA" />
+                <IconTile name="clipboard" color="var(--positive-ink)" size={40} bg="var(--positive-tint-strong)" />
                 <div><h3>{t.nav.cbt}</h3><p>{h.cbtSub}</p></div>
               </div>
               <Button href="/cbt" variant="white" arrow>{h.solveNow}</Button>
             </Card>
             <Card as="article" tone="purple" hover className="mini">
               <div className="mini-head">
-                <IconTile name="monitor" color="#5446C4" size={40} bg="#DCD8F7" />
+                <IconTile name="monitor" color="var(--info-ink)" size={40} bg="var(--info-tint-strong)" />
                 <div><h3>{h.resumeLecture}</h3><p>{h.resumeLectureSub}</p></div>
               </div>
               <Button href="/lectures/3" variant="white" arrow>{h.resume}</Button>
@@ -86,16 +86,16 @@ export default async function Page() {
 
       <aside className="right">
         <Link href="/exam" className="card tone-soft lift dday">
-          <IconTile name="calendar" color="#D64535" size={52} bg="#FFFFFF" />
+          <IconTile name="calendar" color="var(--primary)" size={52} bg="var(--surface)" />
           <span><strong>{h.dday}</strong><small>{h.ddaySub}</small></span>
-          <span className="chev"><Icon name="right" size={18} color="#C63D30" width={2} /></span>
+          <span className="chev"><Icon name="right" size={18} color="var(--primary-ink)" width={2} /></span>
         </Link>
 
         <WeeklyGoals />
 
         <Card as="section" labelledBy="job-h" className="jobs">
           <div className="jobs-head">
-            <IconTile name="bag" color="#E0742E" />
+            <IconTile name="bag" color="var(--data-orange)" />
             <div><h2 id="job-h" className="h3">{h.jobs}</h2><p className="muted">{h.jobsSub}</p></div>
           </div>
           {JOB_LINKS.map(([href, icon], i) => (

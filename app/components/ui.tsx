@@ -40,7 +40,7 @@ export function IconTile({ name, color, size = 48, bg }: { name: IconName; color
 }
 
 /** 아이콘 + 제목/설명 + 꺾쇠. 호버 시 꺾쇠가 이동 */
-export function ListLink({ href = "#", icon, iconColor = "#D64535", title, desc }: {
+export function ListLink({ href = "#", icon, iconColor = "var(--primary)", title, desc }: {
   href?: string; icon: IconName; iconColor?: string; title: string; desc: string;
 }) {
   return (
@@ -70,7 +70,7 @@ export function ProgressBar({ value, label }: { value: number; label: string }) 
 }
 
 /** 원형 진행률. 마운트 시 차오르고 값이 바뀌면 부드럽게 이동 */
-export function Ring({ pct, size, stroke, color = "#2E9E8A", track = "#F3ECEA", fontSize }: {
+export function Ring({ pct, size, stroke, color = "var(--data-teal)", track = "var(--line)", fontSize }: {
   pct: number; size: number; stroke: number; color?: string; track?: string; fontSize: number;
 }) {
   const r = (size - stroke) / 2;
@@ -78,10 +78,10 @@ export function Ring({ pct, size, stroke, color = "#2E9E8A", track = "#F3ECEA", 
   return (
     <div className="ring" style={{ width: size, height: size }}>
       <svg width={size} height={size} aria-hidden="true">
-        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={track} strokeWidth={stroke} />
-        <circle className="ring-fill" cx={size / 2} cy={size / 2} r={r} fill="none" stroke={color} strokeWidth={stroke}
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" style={{ stroke: track }} strokeWidth={stroke} />
+        <circle className="ring-fill" cx={size / 2} cy={size / 2} r={r} fill="none" strokeWidth={stroke}
           strokeLinecap="round" strokeDasharray={c} transform={`rotate(-90 ${size / 2} ${size / 2})`}
-          style={{ strokeDashoffset: c * (1 - pct / 100), "--c": c } as CSSProperties} />
+          style={{ stroke: color, strokeDashoffset: c * (1 - pct / 100), "--c": c } as CSSProperties} />
       </svg>
       <span style={{ fontSize }}>{pct}%</span>
     </div>

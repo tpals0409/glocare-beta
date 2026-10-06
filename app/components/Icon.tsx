@@ -30,7 +30,7 @@ export default function Icon({ name, size = 22, color = "currentColor", width = 
   name: IconName; size?: number; color?: string; width?: number;
 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={width}
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ color }} strokeWidth={width}
       strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d={paths[name]} />
     </svg>
